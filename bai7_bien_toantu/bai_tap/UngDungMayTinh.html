@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "so1">
+    <input type="text" id = "so2"><br>
+    <button onclick="addi()">Addition(+)</button>
+    <button onclick="subt()">Subtraction(-)</button>
+    <button onclick="multi()">Multiplication(x)</button>
+    <button onclick="div()">Division(/)</button><br>
+    Kết Quả:<h1 id = "ketqua"></h1>
+
+<script>
+    
+    function addi() {
+        let so1 = document.getElementById("so1").value;
+        let so2 = document.getElementById("so2").value;
+        let so11 = parseInt(so1);
+        let so22 = parseInt(so2);
+        let result;
+        result = so11 + so22;
+        document.getElementById('ketqua').innerText =  result;
+
+    }
+    function subt() {
+        let so1 = document.getElementById("so1").value;
+        let so2 = document.getElementById("so2").value;
+        let so11 = parseInt(so1);
+        let so22 = parseInt(so2);
+        let result;
+        result = so11 - so22;
+        document.getElementById('ketqua').innerText =  result;
+
+    }
+    function multi() {
+        let so1 = document.getElementById("so1").value;
+        let so2 = document.getElementById("so2").value;
+        let so11 = parseInt(so1);
+        let so22 = parseInt(so2);
+        let result;
+        result = so11 * so22;
+        document.getElementById('ketqua').innerText =  result;
+
+    }
+    function div() {
+        let so1 = document.getElementById("so1").value;
+        let so2 = document.getElementById("so2").value;
+        let so11 = parseInt(so1);
+        let so22 = parseInt(so2);
+        let result;
+        result = so11 / so22;
+        document.getElementById('ketqua').innerText =  result;
+    }
+</script>
+</body>
+</html>
