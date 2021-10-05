@@ -7,42 +7,36 @@
     <title>Document</title>
 </head>
 <body>
-    <label>Amount:</label>
-        <input type="text" id = amount>
-        <label style="margin-left: 100px">From Currency:</label>
-        <select id ="from" >
-            <option value="VND">VietNam</option>
-            <option value="USD">USD</option>
-        </select>
-
-        <label style="margin-left: 150px">To Currency:</label>
-        <select id ="to" >
-            <option value="USD">USD</option>
-            <option value="VND">VietNam</option>
-        </select>
-
-        <button onclick="doChange()">Convert</button><br>
-        Kết quả : <h1 id = ketqua></h1>
-
-
-       <script>
-           function doChange(){
-                let amount = document.getElementById("amount").value;
-                let from = document.getElementById("from").value;
-                let to = document.getElementById("to").value;
-                let result ;
-
-                if ( from === "VND" && to === "USD" ){
-                    result = amount / 23000;
-                } else if ( from === "USD" && to === "VND"){
-                    result = amount * 23000;
-                } else {
-                    result = amount;
-                }
-                document.getElementById('ketqua').innerText =  result;
-            }
-       </script> 
+    <from>
+        <input type="text" name="money" id="VND"> Amount
+        <select id="s1">
+            <option value="vnd">VND</option>
+            <option value="usd">USD</option>
+        </select> From Currency
+        <select id="s2">
+            <option value="usd">USD</option>
+            <option value="vnd">VND</option>
+        </select> To Currency
+        <input
+        <input type="button" value="convert" onclick="switchMoney();">
+    </form>
+    <p id="abc"></p>
+    <script>
+        function switchMoney(){
+            let a = document.getElementById('VND').value;
+            let A = parseInt(a);
+            let B = A * 23000;
+            let C = A / 23000;
+            let X = document.getElementById('s1').value;
+            let Y = document.getElementById('s2').value;
+            if (X===Y)
+            document.getElementById('abc').innerHTML = "Giá trị đổi được =" + A;
+            else if (X==="vnd" && Y==="usd")
+                document.getElementById('abc').innerHTML = "Giá trị đổi được =" + C;
+            else
+                document.getElementById('abc').innerHTML = "Giá trị đổi được =" + B;
+        }
     
-    
+    </script>
 </body>
 </html>
