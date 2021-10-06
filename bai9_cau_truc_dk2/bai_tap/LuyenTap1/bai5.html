@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let test = parseInt(prompt('Nhập điểm bài kiểm tra'));
+        let mid = parseInt(prompt('Nhập điểm thi giữa kì'));
+        let final = parseInt(prompt("Nhập điểm thi cuối kì"));
+        let average = (test+mid+final);
+        if(average >=9){
+            document.write("Bạn đạt loại A")
+        }
+        else if(average >=7){
+            document.write('Bạn đạt loại B')
+        }
+            else if(average >=5){
+            document.write('Bạn đạt loại C')
+        }
+                 else {
+            document.write('Bạn đạt loại F')
+        }
+
+    </script>
+</body>
+</html>

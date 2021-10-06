@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let revenue = parseInt(prompt("Nhập doanh số bán hàng (triệu đồng)"));
+    let commission;
+    if (revenue>100) {
+        commission = revenue * 10 / 100;
+    }   else if (revenue>=50) {
+        commission = revenue * 7 / 100;
+    }   else if (revenue>=25) {
+        commission = revenue * 5 / 100;
+    }   else {
+        commission = revenue * 3 / 100;
+    }
+    alert("Tiền hoa hồng của bạn là " +commission+ " triệu");
+    </script>
+</body>
+</html>

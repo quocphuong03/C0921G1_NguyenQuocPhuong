@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Nhập các tham số của phương trình ax +b =0</h1>
+<label>a=</label>
+<input type="text" id="a"><br>
+<label>b=</label>
+<input type="text" id="b"><br>
+<button onclick="pt()">Kết quả</button>
+<p id="result"></p>
+<script>
+    function pt() {
+        let a = parseInt(document.getElementById('a').value);
+        let b = parseInt(document.getElementById('b').value);
+        let x ;
+        if (a===0) {
+            if (b===0){
+                document.getElementById('result').innerText='Phương trình có vô số nghiệm';
+            }
+
+        }
+        else if(b===0){
+            document.getElementById('result').innerText='Phương trình vô nghiệm'
+            }
+        else {
+            x=-b/a
+            document.getElementById('result').innerText="Phương trình có nghiêm là:" + x
+        }
+
+        }
+
+
+
+</script>
+</body>
+</html>
