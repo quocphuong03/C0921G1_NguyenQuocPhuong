@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let money = parseInt(prompt('Thu nhập cá nhân(Triệu)'))
+        let thue;
+        if (money <5){
+            alert('Bạn không cần nộp thuế')
+        }
+        else if (money <=10){
+            thue = money*5/100;
+            alert('Số thuế bạn phải nộp là '+ thue+' Triệu')
+        }
+        else {
+            thue = 10*money/100;
+            alert('Số thuế bạn phải nộp là '+ thue+' Triệu')
+        }
+    </script>
+</body>
+</html>

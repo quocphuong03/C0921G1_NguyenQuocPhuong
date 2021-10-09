@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num;
+    let a = 0;
+    let b = 1;
+    let i = 1;
+    while(i>0) {
+        num = a+b;
+        a = b;
+        b=num;
+        document.write(num);
+        document.write('<br>');
+        i++;
+        let mod = num % 5;
+        if(mod ==0){
+            alert("Số trong dãy fibonacci chia hết cho 6 là :"+ num);break;
+        }
+    }
+</script>
+</body>
+</html>

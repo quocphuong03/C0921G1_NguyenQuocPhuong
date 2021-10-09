@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Số tiền ban đầu(Triệu)</h1>
+    <input type="text" id="money">
+    <h1>Số tháng cho vay(Tháng)</h1>
+    <input type="text" id="time">
+    <h1>Lãi suất hàng tháng(%)</h1>
+    <input type="text" id="laisuat"><br>
+    <button onclick="tinh()">Tính lãi</button>
+    <p id="kq">Tiền lãi bạn phải trả là :</p>
+<script>
+     function tinh() {
+        let p=parseFloat(document.getElementById('money').value);
+        let t=parseFloat(document.getElementById('time').value);
+        let r=parseFloat(document.getElementById('laisuat').value);
+        let result = p*(1+r)*t-p;
+        document.getElementById('kq').innerText = result + " Triệu"
+
+
+    }
+    </script>
+</body>
+</html>
