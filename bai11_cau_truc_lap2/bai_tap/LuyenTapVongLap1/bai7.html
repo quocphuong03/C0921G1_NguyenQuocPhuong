@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let mod1;
+        let mod2;
+        for (let i=1;i<=100;i++){
+            mod1 = i%3;
+            mod2 = i%5;
+            if(mod1==0&&mod2==0){
+                document.write('FizzBuzz');
+                document.write('<br>');
+            }
+            else if(mod1==0){
+                document.write('Fizz');
+                document.write('<br>');
+            }
+            else if (mod2==0){
+                document.write('Buzz');
+                document.write('<br>');
+            }
+            else {
+                document.write(i);
+                document.write('<br>');
+            }
+        }
+    </script>
+</body>
+</html>

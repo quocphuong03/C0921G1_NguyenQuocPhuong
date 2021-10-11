@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Play</button>
+<script>
+    function play()
+    {
+        let a = parseInt(prompt('Nhap so dau tien :'));
+        let b = parseInt(prompt('Nhap so thu hai:'));
+        let c =  Math.floor(Math.random() * (a-b || b-a));
+
+        for(let i = 1 ;i <= 3; i++) {
+            let d= parseInt(prompt('So ban muon doan la'));
+            if( d === c ) {
+                alert('You Win');
+                break;
+            } else if( d > c) {
+                alert('So cua ban lon hon so cua toi');
+            } else {
+                alert('So cua ban nho hon so cua toi');
+            }
+        }
+
+    }
+</script>
+
+</body>
+</html>
