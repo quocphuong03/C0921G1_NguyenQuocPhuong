@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = ['a','b','c',1,2,3,'d','e','f'];
+    let count = 0;
+    for (let i = 0; i < array.length; i++) {
+        if (!isNaN(array[i])) {
+            count++;
+        }
+    }
+    document.write('ký tự số trong mảng' + count);
+</script>
+</body>
+</html>
