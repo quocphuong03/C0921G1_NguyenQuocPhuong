@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe' ,'Regulus'];
+    let b=['UrsaMinor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'UrsaMajor', 'Leo'];
+    let c = prompt('Nhập vào tên ngôi sao bạn muốn tìm');
+    function find(x)
+    {
+        for(let i=0;i<a.length;i++)
+        {
+            if(x ==a[i])
+            {
+                x=i;
+                alert('Ngôi sao bạn muốn tìm thuộc chòm sao '+b[x])
+                break;
+            }
+            else
+            {
+                alert('Không tìm thấy ngôi sao này');
+                break;
+            }
+        }
+    }
+    find(c);
+</script>
+</body>
+</html>

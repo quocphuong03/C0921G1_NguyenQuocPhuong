@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="Nhập 1 số">
+<button onclick="input()">Click</button><br>
+<p>Kết quả</p>
+<p id="result"></p>
+<script>
+    function input()
+    {
+        let nhap=parseInt(document.getElementById('nhap').value);
+        ++nhap;
+        document.getElementById('result').innerText=nhap;
+        return nhap;
+    }
+</script>
+</body>
+</html>

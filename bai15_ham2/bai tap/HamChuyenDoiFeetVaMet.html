@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="foot1" placeholder="foot">
+<button onclick=footToMeter()>Change</button><br>
+<p>Kết quả(meter)</p>
+<p id ='meter1'></p>
+<input type="text" id="meter2" placeholder="meter">
+<button onclick=meterToFoot()>Change</button><br>
+<p>Kết quả(feets)</p>
+<p id="foot2"></p>
+   <script>
+        function footToMeter()
+    {
+        let meter;
+        let foot3 = parseInt(document.getElementById('foot1').value);
+        meter = 0.305 * foot3;
+        document.getElementById('meter1').innerText=meter;
+    }
+    function meterToFoot()
+    {
+        let foot;
+        let meter3 = parseInt(document.getElementById('meter2').value);
+        foot = 3.279 * meter3;
+        document.getElementById('foot2').innerText=foot;
+    }
+   </script>
+</body>
+</html>
