@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let n=parseInt(prompt('Nhập số phần tử trong mảng'));
+    let a=[n];
+    let b=[n];
+    for(let i=0;i< n;i++)
+    {
+        let value=parseInt(prompt("Nhập vào phần tử thứ"+ (i+1)));
+        a[i]=value;
+    }
+
+    for (let i=1;i<n;i++)
+    {
+        b[0]=a[0];
+        b[i]=b[i-1] + a[i]
+    }
+    document.write(b)
+    </script>
+
+</body>
+</html>

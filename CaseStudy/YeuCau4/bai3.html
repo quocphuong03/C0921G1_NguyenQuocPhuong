@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let str1=prompt('Nhập xâu 1');
+    let str2=prompt('Nhập xâu 2');
+    let array1=str1.split('');
+    let array2=str2.split('');
+    let array3=Array()
+    for (let i=0;i<array1.length;i++)
+    {
+        for (let j=0;j<array2.length;j++)
+        {
+            if (array2[j]==array1[i])
+            {
+                array3.push(array2[j]);
+                array1.splice(i,1);
+                array2.splice(j,1);
+                j--;
+            }
+
+        }
+    }
+    document.write(array3);
+    document.write('<br>');
+    document.write('Số kí tự chung của 2 mảng là '+ array3.length)
+    </script>
+</body>
+</html>

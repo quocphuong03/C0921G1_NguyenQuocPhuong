@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var n = parseInt(prompt('Nhập số hàng cho ma trận'));
+    var m = parseInt(prompt('Nhập số cột cho ma trận'));
+    let array = new Array(n);
+    let count = 0;
+    let check;
+    let soNguyento = [];
+    for (let i = 0; i < n; i++) {
+        array[i] = new Array(m);
+        for (let j = 0; j < m; j++) {
+            array[i][j] = parseInt(prompt('Nhập phần tử ở vị trí ' + '[' + i + ']' + '[' + j + ']'))
+        }
+    }
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < m; j++) {
+            if (array[i][j] == 2) {
+                soNguyento.push(array[i][j]);
+                count++;
+            } else {
+                for (let k = 2; k < array[i][j]; k++) {
+                    check = true;
+                    if (array[i][j] % k == 0) {
+                        check = false;
+                        break;
+                    }
+
+                }
+                if (check == true) {
+                    soNguyento.push(array[i][j]);
+                    count++;
+                }
+            }
+        }
+    }
+    document.write('Có ' + count + ' số nguyên tố trong mảng');
+    document.write('<br>');
+    document.write('Các số nguyên tố trong mảng là: ' + soNguyento);
+    </script>
+</body>
+</html>

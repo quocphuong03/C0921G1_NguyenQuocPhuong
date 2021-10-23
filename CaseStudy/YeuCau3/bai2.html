@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n=parseInt(prompt('Nhập số phần tử trong mảng a'));
+    let m=parseInt(prompt('Nhập số phần tử trong mảng b'));
+    let a=[];
+    let b=[];
+    let c=[];
+    let check;
+    let check1;
+    for(let i=0;i< n;i++)
+    {
+       a[i]=parseInt(prompt("Nhập vào phần tử thứ"+ (i+1)+' mảng a'));
+    }
+    for(let j=0;j< m;j++)
+    {
+        b[j]=parseInt(prompt("Nhập vào phần tử thứ"+ (j+1)+' mảng b'));
+    }
+    for(let i=0;i<a.length;i++)
+    {
+        for (let j = 0; j < b.length; j++)
+        {
+            if (b[j] == a[i])
+            {
+               check=true;
+               break;
+w
+            }
+            else
+            {
+                check=false;
+            }
+
+        }
+        if(check==false)
+        {
+            c.push(a[i]);
+        }
+    }
+    for(let j=0;j<b.length;j++)
+    {
+        for (let i = 0; i < a.length; i++)
+        {
+            if (b[j] == a[i])
+            {
+                check1=true;
+                break;
+            }
+            else
+            {
+                check1=false;
+            }
+
+        }
+        if(check1==false)
+        {
+            c.push(b[j]);
+        }
+    }
+
+   document.write(c)
+    </script>
+</body>
+</html>

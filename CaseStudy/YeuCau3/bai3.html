@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt('Nhập số phần tử trong mảng tử số'));
+        let m = parseInt(prompt("Nhập số phần tử trong mảng mẫu số"));
+        let tuSo = Array(n);
+        let mauSo = Array(m);
+        for (let i = 0; i < tuSo.length; j++) {
+            tuSo[i] = parseInt(prompt("Nhập vào phần tử của mảng số thứ" +(i+1)))
+        }
+        for (let j = 0; j < mauSo.length; j++) {
+            mauSo[j] = parseInt(prompt("Nhập vào phần tử của mảng mẫu số thứ " +(j+1)))
+        }
+        function minArray(arr) {
+            let min = arr[0];
+            for(var i = 1; i < arr.length; i++) {
+                if(arr[i] <= min) {
+                    min = arr[i];
+                }
+            }
+            return min;
+        }
+        function maxArray(arr) {
+            let max = arr[0];
+            for(var i = 1; i < arr.length; i++) {
+                if(arr[i] >= max) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        let a = maxArray(mauSo);
+        let b = minArray(tuSo);
+        let c = Math.floor(a/b);
+        alert('Chỉ số của phân số được tạo ra bởi 2 mảng là ' +c)
+    </script>
+</body>
+</html>

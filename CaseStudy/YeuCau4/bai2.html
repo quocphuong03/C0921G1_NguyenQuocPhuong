@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+let str = prompt('Nhập vào xâu kí tự');
+let array = str.split('');
+let c=Array();
+let check;
+for(let i=1;i<array.length;i++)
+{
+    for(let j=0;j<=i;j++)
+    {
+        if(array[i]==array[j])
+        {
+            check = false
+        }
+        else
+        {
+           check = true
+        }
+    }
+}
+if (check)
+{
+    c.push(array[i])
+}
+document.write(c)
+    </script>
+</body>
+</html>

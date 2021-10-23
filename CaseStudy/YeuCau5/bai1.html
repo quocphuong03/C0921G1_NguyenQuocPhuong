@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = parseInt(prompt('Nhập số hàng cho ma trận'));
+        var m = parseInt(prompt('Nhập số cột cho ma trận'));
+        var sum =0;
+        let array = new Array(n);
+        for (let i = 0; i < n; i++) {
+            array[i] = new Array(m);
+            for (let j = 0; j < m; j++) {
+                array[i][j] = parseInt(prompt('Nhập phần tử ở vị trí ' +'['+ i+']' +'['+ j+']'))
+            }
+        }
+
+        for (let i = 0; i < n; i++) {
+            for (let j = 0; j < m; j++) {
+                if(array[i][j]%2==0)
+                {
+                    sum = sum +array[i][j];
+                }
+            }
+        }
+        alert('Tổng các số chẵn trong ma trận là '+sum)
+    </script>
+</body>
+</html>

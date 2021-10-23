@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    let n = prompt('Nhập 1 số từ bàn phím');
+    let so =['1','2','3','4','5','6','7','8','9','0'];
+    let chu =['mot','hai','ba','bon','nam','sau','bay','tam','chin','khong'];
+    let array = n.split('');
+    let array1=[];
+    for(let j=0;j<array.length;j++) {
+        for (let i = 0; i < so.length; i++)
+        {
+            if (array[j]==so[i])
+            {
+                index = i;
+                array1.push(chu[i])
+            }
+        }
+    }
+    let str = array1.join(' ');
+    alert(str);
+    </script>
+</body>
+</html>
